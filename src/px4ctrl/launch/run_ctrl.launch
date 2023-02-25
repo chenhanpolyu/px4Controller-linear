@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<launch>
+
+	<node pkg="px4ctrl" type="px4ctrl_node" name="px4ctrl" output="screen">
+        	<!-- <remap from="~odom" to="/vicon_imu_ekf_odom" /> -->
+			
+			<remap from="~odom" to="/gt_iris_base_link_imu" />
+
+		<remap from="~cmd" to="/position_cmd" />
+
+        <rosparam command="load" file="$(find px4ctrl)/config/ctrl_param_fpv.yaml" />
+	</node>
+ <node pkg="px4ctrl" type="takeoff.sh" 
+    name="takeoff" output="screen">
+</node>
+</launch>
