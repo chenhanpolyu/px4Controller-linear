@@ -1,2 +1,3 @@
-# 看[px4ctrl包里的readme.md](https://github.com/arclab-hku/px4Controller/blob/master/src/px4ctrl/README.md)
-# Please do NOT release or share this repo! ONLY USE IT IN OUR LAB 
+# Liner cascade PID controller for px4 offboard control
+
+This repo contains the linear controller released in this [link](https://github.com/ZJU-FAST-Lab/Fast-Drone-250/tree/master/src/utils), and the necessary ROS msgs. It receives the P-V-A commands and output the raw thrust and attitude commands for px4.
